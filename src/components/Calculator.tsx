@@ -1,5 +1,8 @@
 ﻿import React, { useState } from "react";
 import { Button } from "./Button";
+import { NumberButton } from "./NumberButton copy";
+import OperatorButton from "./OperatorButton";
+import FunctionButton from "./FunctionButton";
 
 export const Calculator: React.FC = () => {
   const [display, setDisplay] = useState("0");
@@ -23,45 +26,25 @@ export const Calculator: React.FC = () => {
     <div className="bg-white rounded-lg shadow-md p-4">
       <div className="text-right text-2xl font-bold mb-4">{display}</div>
       <div className="grid grid-cols-4 gap-2">
-        <Button value="7" onClick={handleButtonClick} />
-        <Button value="8" onClick={handleButtonClick} />
-        <Button value="9" onClick={handleButtonClick} />
-        <Button
-          value="/"
-          onClick={handleButtonClick}
-          className="bg-yellow-500 text-white"
-        />
+        <NumberButton value="7" onClick={handleButtonClick} />
+        <NumberButton value="8" onClick={handleButtonClick} />
+        <NumberButton value="9" onClick={handleButtonClick} />
+        <OperatorButton value="/" onClick={handleButtonClick} />
 
-        <Button value="4" onClick={handleButtonClick} />
-        <Button value="5" onClick={handleButtonClick} />
-        <Button value="6" onClick={handleButtonClick} />
-        <Button
-          value="*"
-          onClick={handleButtonClick}
-          className="bg-yellow-500 text-white"
-        />
+        <NumberButton value="4" onClick={handleButtonClick} />
+        <NumberButton value="5" onClick={handleButtonClick} />
+        <NumberButton value="6" onClick={handleButtonClick} />
+        <OperatorButton value="*" onClick={handleButtonClick} />
 
-        <Button value="1" onClick={handleButtonClick} />
-        <Button value="2" onClick={handleButtonClick} />
-        <Button value="3" onClick={handleButtonClick} />
-        <Button
-          value="-"
-          onClick={handleButtonClick}
-          className="bg-yellow-500 text-white"
-        />
+        <NumberButton value="1" onClick={handleButtonClick} />
+        <NumberButton value="2" onClick={handleButtonClick} />
+        <NumberButton value="3" onClick={handleButtonClick} />
+        <OperatorButton value="-" onClick={handleButtonClick} />
 
-        <Button value="0" onClick={handleButtonClick} />
-        <Button value="." onClick={handleButtonClick} />
-        <Button
-          value="C"
-          onClick={handleButtonClick}
-          className="bg-red-500 text-white"
-        />
-        <Button
-          value="+"
-          onClick={handleButtonClick}
-          className="bg-yellow-500 text-white"
-        />
+        <NumberButton value="0" onClick={handleButtonClick} />
+        <NumberButton value="." onClick={handleButtonClick} />
+        <FunctionButton value="C" onClick={handleButtonClick} />
+        <OperatorButton value="+" onClick={handleButtonClick} />
 
         <Button
           value="="
