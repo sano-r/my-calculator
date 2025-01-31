@@ -1,12 +1,12 @@
-import { Calculator } from "./Calculator";
+import React from "react";
+import { Calculator } from "./components/Calculator";
 
-export function App() {
+const App: React.FC = () => {
   return (
-    <div className='flex items-center justify-center min-h-screen bg-gray-100'>
-      <div className='bg-white p-6 rounded-lg shadow-lg'>
-        <h1 className="text-2xl font-bold mb-4">電卓アプリ</h1>
-      </div>
+    <div className="bg-gray-100 h-screen flex items-center justify-center">
       <Calculator />
     </div>
-  )
-}
+  );
+};
+
+export default App;
